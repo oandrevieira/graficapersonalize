@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial | Personalize Embalagens — Growth Marketing</title>
+    <meta name="description" content="Proposta estratégica de Growth Marketing para Personalize Embalagens. Escale vendas B2B e B2C com tráfego pago e funil de alta conversão.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { inter: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50:'#e6fff7',100:'#b3ffe6',200:'#80ffd4',300:'#4dffc3',400:'#1affb1',500:'#00e69d',600:'#00cc8b',700:'#00b379',800:'#009967',900:'#008055' },
+                        dark: { 50:'#e8e8ec',100:'#b9b9c4',200:'#8a8a9c',300:'#5b5b74',400:'#2c2c4c',500:'#16162a',600:'#121224',700:'#0e0e1e',800:'#0a0a18',900:'#060612' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { background: #0a0a18; color: #e0e0e0; }
+        .gradient-text { background: linear-gradient(135deg, #00e69d, #00b379, #4dffc3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glass { background: rgba(22, 22, 42, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(0, 230, 157, 0.1); }
+        .glass-card { background: rgba(22, 22, 42, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); transition: all 0.4s cubic-bezier(0.4,0,0.2,1); }
+        .glass-card:hover { border-color: rgba(0, 230, 157, 0.3); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,230,157,0.08); }
+        .glow { box-shadow: 0 0 30px rgba(0, 230, 157, 0.15); }
+        .glow-btn { background: linear-gradient(135deg, #00e69d, #00b379); transition: all 0.3s; }
+        .glow-btn:hover { box-shadow: 0 0 30px rgba(0,230,157,0.4); transform: translateY(-2px); }
+        .metric-card { background: linear-gradient(135deg, rgba(0,230,157,0.08), rgba(0,179,121,0.04)); border: 1px solid rgba(0,230,157,0.15); transition: all 0.3s; }
+        .metric-card:hover { border-color: rgba(0,230,157,0.4); background: linear-gradient(135deg, rgba(0,230,157,0.12), rgba(0,179,121,0.08)); }
+        .timeline-line { background: linear-gradient(180deg, #00e69d, transparent); }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .pulse-dot { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.5)} }
+        .hero-gradient { background: radial-gradient(ellipse at 30% 0%, rgba(0,230,157,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 100%, rgba(0,179,121,0.05) 0%, transparent 50%); }
+        table { border-collapse: separate; border-spacing: 0; }
+        th { background: rgba(0,230,157,0.1); }
+        td, th { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        tr:hover td { background: rgba(0,230,157,0.03); }
+        .tag { background: rgba(0,230,157,0.1); color: #00e69d; border: 1px solid rgba(0,230,157,0.2); }
+        .tag-red { background: rgba(239,68,68,0.1); color: #ef4444; border: 1px solid rgba(239,68,68,0.2); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0a0a18; }
+        ::-webkit-scrollbar-thumb { background: #00b379; border-radius: 3px; }
+        .nav-blur { backdrop-filter: blur(20px); background: rgba(10,10,24,0.8); }
+        .progress-bar { height: 3px; background: linear-gradient(90deg, #00e69d, #00b379); position: fixed; top: 0; left: 0; z-index: 100; transition: width 0.1s; }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg glow-btn flex items-center justify-center font-bold text-dark-900 text-sm">P</div>
+                <span class="font-semibold text-white text-sm">Personalize Embalagens</span>
+            </div>
+            <div class="hidden md:flex items-center gap-6 text-xs text-gray-400">
+                <a href="#diagnostico" class="hover:text-emerald-400 transition">Diagnóstico</a>
+                <a href="#estrategia" class="hover:text-emerald-400 transition">Estratégia</a>
+                <a href="#cronograma" class="hover:text-emerald-400 transition">Cronograma</a>
+                <a href="#investimento" class="hover:text-emerald-400 transition">Investimento</a>
+                <a href="#roi" class="hover:text-emerald-400 transition">ROI</a>
+                <a href="#cta" class="glow-btn px-4 py-2 rounded-full text-dark-900 font-semibold hover:shadow-lg">Fechar Proposta</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center hero-gradient pt-20">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-xs text-emerald-400 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+                        Proposta Exclusiva — Março 2026
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+                        Escale suas vendas com <span class="gradient-text">Growth Marketing</span> de alta performance
+                    </h1>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Estratégia completa de tráfego pago + funil de conversão para transformar a
+                        <strong class="text-white">Personalize Embalagens</strong> em referência no mercado de embalagens personalizadas.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#cta" class="glow-btn px-8 py-3 rounded-full text-dark-900 font-bold text-sm">Aprovar Proposta →</a>
+                        <a href="#diagnostico" class="px-8 py-3 rounded-full border border-white/10 text-white font-medium text-sm hover:border-emerald-400/50 transition">Ver Diagnóstico</a>
+                    </div>
+                </div>
+                <div class="fade-in flex justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-emerald-500/10 rounded-3xl blur-3xl"></div>
+                        <div class="relative glass rounded-3xl p-8 text-center">
+                            <div class="text-6xl mb-4">📦</div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Projeção 90 Dias</h3>
+                            <div class="text-5xl font-black gradient-text mb-2">5-8x</div>
+                            <p class="text-gray-400 text-sm">ROAS estimado no Mês 3</p>
+                            <div class="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-white/10">
+                                <div><div class="text-xl font-bold text-white">+300%</div><div class="text-xs text-gray-500">Leads</div></div>
+                                <div><div class="text-xl font-bold text-white">-40%</div><div class="text-xs text-gray-500">CAC</div></div>
+                                <div><div class="text-xl font-bold text-white">+200%</div><div class="text-xs text-gray-500">Vendas</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIAGNÓSTICO -->
+    <section id="diagnostico" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-emerald-400 text-sm font-semibold tracking-widest uppercase">01 — Análise</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Diagnóstico do Perfil Atual</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Análise estratégica do Instagram @personalize.embalagens para identificar oportunidades de crescimento.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-4 mb-12 fade-in">
+                <div class="metric-card rounded-2xl p-6 text-center">
+                    <div class="text-3xl font-black text-white">3.509</div>
+                    <div class="text-xs text-gray-400 mt-1">Seguidores</div>
+                </div>
+                <div class="metric-card rounded-2xl p-6 text-center">
+                    <div class="text-3xl font-black text-white">4.147</div>
+                    <div class="text-xs text-gray-400 mt-1">Seguindo</div>
+                </div>
+                <div class="metric-card rounded-2xl p-6 text-center">
+                    <div class="text-3xl font-black text-white">116</div>
+                    <div class="text-xs text-gray-400 mt-1">Publicações</div>
+                </div>
+                <div class="metric-card rounded-2xl p-6 text-center">
+                    <div class="text-3xl font-black text-emerald-400">~1.2%</div>
+                    <div class="text-xs text-gray-400 mt-1">Engajamento Est.</div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 fade-in">
+                <div class="glass-card rounded-2xl p-8">
+                    <h3 class="text-lg font-bold text-emerald-400 mb-4 flex items-center gap-2">✅ Pontos Fortes</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-start gap-2"><span class="tag px-2 py-0.5 rounded text-xs mt-0.5">Nicho</span>Posicionamento claro no mercado de embalagens personalizadas</li>
+                        <li class="flex items-start gap-2"><span class="tag px-2 py-0.5 rounded text-xs mt-0.5">Visual</span>Portfólio visual com potencial para catálogo de produtos</li>
+                        <li class="flex items-start gap-2"><span class="tag px-2 py-0.5 rounded text-xs mt-0.5">B2B</span>Produto com alto ticket médio e recorrência de compra</li>
+                        <li class="flex items-start gap-2"><span class="tag px-2 py-0.5 rounded text-xs mt-0.5">Marca</span>Bio objetiva: "Soluções inteligentes para seu negócio"</li>
+                        <li class="flex items-start gap-2"><span class="tag px-2 py-0.5 rounded text-xs mt-0.5">Mercado</span>Segmento em expansão — e-commerce impulsiona demanda</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <h3 class="text-lg font-bold text-red-400 mb-4 flex items-center gap-2">⚠️ Oportunidades de Melhoria</h3>
+                    <ul class="space-y-3 text-sm text-gray-300">
+                        <li class="flex items-start gap-2"><span class="tag-red px-2 py-0.5 rounded text-xs mt-0.5">Ratio</span>Seguindo (4.147) > Seguidores (3.509) — indica follow/unfollow</li>
+                        <li class="flex items-start gap-2"><span class="tag-red px-2 py-0.5 rounded text-xs mt-0.5">Volume</span>116 posts em um perfil ativo é baixo — consistência necessária</li>
+                        <li class="flex items-start gap-2"><span class="tag-red px-2 py-0.5 rounded text-xs mt-0.5">Funil</span>Ausência de funil de vendas estruturado (Topo → Fundo)</li>
+                        <li class="flex items-start gap-2"><span class="tag-red px-2 py-0.5 rounded text-xs mt-0.5">Ads</span>Sem evidência de tráfego pago ativo ou landing pages</li>
+                        <li class="flex items-start gap-2"><span class="tag-red px-2 py-0.5 rounded text-xs mt-0.5">CTA</span>Falta de CTAs claros e estratégia de conversão direta</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESTRATÉGIA -->
+    <section id="estrategia" class="py-24 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-emerald-400 text-sm font-semibold tracking-widest uppercase">02 — Metodologia</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Estratégia de Growth Marketing</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Framework de 3 pilares para dominar o mercado de embalagens personalizadas.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 fade-in">
+                <div class="glass-card rounded-2xl p-8">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-2xl mb-4">🎯</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Tráfego Pago</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Meta Ads (Instagram + Facebook) com campanhas segmentadas B2B e B2C. Públicos LAL, interesses e remarketing dinâmico.</p>
+                    <ul class="mt-4 space-y-2 text-xs text-gray-500">
+                        <li>→ Campanhas de Conversão (WhatsApp)</li>
+                        <li>→ Campanhas de Catálogo de Produtos</li>
+                        <li>→ Remarketing para visitantes do perfil</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-2xl mb-4">📊</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Funil de Vendas</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Estruturação completa do funil: TOFU (awareness), MOFU (consideração) e BOFU (conversão) com criativos específicos.</p>
+                    <ul class="mt-4 space-y-2 text-xs text-gray-500">
+                        <li>→ Criativos carrossel + vídeo + estático</li>
+                        <li>→ Copy persuasiva com gatilhos mentais</li>
+                        <li>→ Landing pages otimizadas para conversão</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-2xl mb-4">🚀</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Growth Orgânico</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Consultoria de conteúdo para Instagram: calendário editorial, Reels estratégicos e posicionamento de marca.</p>
+                    <ul class="mt-4 space-y-2 text-xs text-gray-500">
+                        <li>→ Calendário de 12 posts/mês</li>
+                        <li>→ Templates de Stories com CTA</li>
+                        <li>→ Hashtag research e otimização de bio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRONOGRAMA -->
+    <section id="cronograma" class="py-24 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-emerald-400 text-sm font-semibold tracking-widest uppercase">03 — Roadmap</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Cronograma de 90 Dias</h2>
+            </div>
+            <div class="space-y-6 fade-in">
+                <!-- MÊS 1 -->
+                <div class="glass-card rounded-2xl p-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-yellow-400 to-yellow-600"></div>
+                    <div class="flex flex-wrap items-start gap-6">
+                        <div class="text-center min-w-[80px]">
+                            <div class="text-xs text-yellow-400 font-bold uppercase tracking-widest">Mês 1</div>
+                            <div class="text-2xl font-black text-white mt-1">Teste</div>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-white mb-3">Validação & Estruturação</h4>
+                            <div class="grid md:grid-cols-2 gap-3 text-sm text-gray-400">
+                                <div>✦ Setup do Business Manager e Pixel</div>
+                                <div>✦ Criação de 8-12 criativos variados</div>
+                                <div>✦ Teste A/B de 4+ públicos diferentes</div>
+                                <div>✦ Instalação de tracking completo</div>
+                                <div>✦ Teste de formatos (carrossel vs vídeo vs estático)</div>
+                                <div>✦ Definição de KPIs base e benchmarks</div>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="tag px-3 py-1 rounded-full text-xs">Ad Spend: R$ 1.500 - R$ 2.000</span>
+                                <span class="tag px-3 py-1 rounded-full text-xs">Meta: Coletar dados e validar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MÊS 2 -->
+                <div class="glass-card rounded-2xl p-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-blue-400 to-blue-600"></div>
+                    <div class="flex flex-wrap items-start gap-6">
+                        <div class="text-center min-w-[80px]">
+                            <div class="text-xs text-blue-400 font-bold uppercase tracking-widest">Mês 2</div>
+                            <div class="text-2xl font-black text-white mt-1">Otimizar</div>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-white mb-3">Otimização & Redução de CAC</h4>
+                            <div class="grid md:grid-cols-2 gap-3 text-sm text-gray-400">
+                                <div>✦ Cortar criativos/públicos de baixo desempenho</div>
+                                <div>✦ Escalar os 2-3 melhores conjuntos</div>
+                                <div>✦ Implementar remarketing avançado</div>
+                                <div>✦ Otimizar copies e CTAs vencedores</div>
+                                <div>✦ Criar Lookalikes a partir dos melhores leads</div>
+                                <div>✦ Redução agressiva de CPC e CPL</div>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="tag px-3 py-1 rounded-full text-xs">Ad Spend: R$ 2.500 - R$ 3.500</span>
+                                <span class="tag px-3 py-1 rounded-full text-xs">Meta: ROAS 3-4x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- MÊS 3 -->
+                <div class="glass-card rounded-2xl p-8 relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-emerald-400 to-emerald-600"></div>
+                    <div class="flex flex-wrap items-start gap-6">
+                        <div class="text-center min-w-[80px]">
+                            <div class="text-xs text-emerald-400 font-bold uppercase tracking-widest">Mês 3</div>
+                            <div class="text-2xl font-black text-white mt-1">Escalar</div>
+                        </div>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-white mb-3">Escala Agressiva & Máximo ROI</h4>
+                            <div class="grid md:grid-cols-2 gap-3 text-sm text-gray-400">
+                                <div>✦ Aumento de 50-100% no orçamento validado</div>
+                                <div>✦ Duplicar conjuntos campeões com bid manual</div>
+                                <div>✦ Campanha de catálogo dinâmico (DPA)</div>
+                                <div>✦ Expansão para Google Ads (Search + Shopping)</div>
+                                <div>✦ Automação de follow-up via WhatsApp</div>
+                                <div>✦ Relatório final com framework para escala contínua</div>
+                            </div>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="tag px-3 py-1 rounded-full text-xs">Ad Spend: R$ 4.000 - R$ 6.000</span>
+                                <span class="tag px-3 py-1 rounded-full text-xs">Meta: ROAS 5-8x</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INVESTIMENTO + MÉTRICAS -->
+    <section id="investimento" class="py-24 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-emerald-400 text-sm font-semibold tracking-widest uppercase">04 — Financeiro</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Investimento & Métricas</h2>
+            </div>
+
+            <!-- Métricas Estimadas -->
+            <div class="glass-card rounded-2xl p-8 mb-8 fade-in">
+                <h3 class="text-lg font-bold text-white mb-6">📈 Métricas Estimadas — Nicho Gráficas/Embalagens</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="text-left text-emerald-400"><th class="rounded-tl-lg">Métrica</th><th>Mês 1</th><th>Mês 2</th><th class="rounded-tr-lg">Mês 3</th></tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr><td class="font-medium text-white">CPC (Custo por Clique)</td><td>R$ 1,20 — R$ 2,50</td><td>R$ 0,80 — R$ 1,80</td><td>R$ 0,60 — R$ 1,50</td></tr>
+                            <tr><td class="font-medium text-white">CTR (Taxa de Clique)</td><td>1,5% — 2,5%</td><td>2,5% — 4,0%</td><td>3,5% — 5,0%</td></tr>
+                            <tr><td class="font-medium text-white">CPM (Custo por Mil)</td><td>R$ 18 — R$ 35</td><td>R$ 14 — R$ 28</td><td>R$ 10 — R$ 22</td></tr>
+                            <tr><td class="font-medium text-white">CPL (Custo por Lead)</td><td>R$ 8 — R$ 15</td><td>R$ 5 — R$ 10</td><td>R$ 3 — R$ 8</td></tr>
+                            <tr><td class="font-medium text-white">ROAS</td><td>1,5x — 2,5x</td><td>3x — 4,5x</td><td class="font-bold text-emerald-400">5x — 8x</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Tabela de Investimento -->
+            <div class="glass-card rounded-2xl p-8 fade-in">
+                <h3 class="text-lg font-bold text-white mb-6">💰 Plano de Investimento (3 Meses)</h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="text-left text-emerald-400"><th class="rounded-tl-lg">Item</th><th>Mês 1</th><th>Mês 2</th><th>Mês 3</th><th class="rounded-tr-lg">Total</th></tr>
+                        </thead>
+                        <tbody class="text-gray-300">
+                            <tr><td class="font-medium text-white">Ad Spend (Verba de Anúncios)</td><td>R$ 2.000</td><td>R$ 3.000</td><td>R$ 5.000</td><td class="font-bold text-white">R$ 10.000</td></tr>
+                            <tr><td class="font-medium text-white">Gestão de Tráfego (Fee)</td><td>R$ 1.500</td><td>R$ 1.500</td><td>R$ 1.500</td><td class="font-bold text-white">R$ 4.500</td></tr>
+                            <tr><td class="font-medium text-white">Criativos & Design</td><td>R$ 500</td><td>R$ 500</td><td>R$ 500</td><td class="font-bold text-white">R$ 1.500</td></tr>
+                            <tr class="border-t-2 border-emerald-500/20"><td class="font-bold text-emerald-400 text-base">TOTAL MENSAL</td><td class="font-bold text-white text-base">R$ 4.000</td><td class="font-bold text-white text-base">R$ 5.000</td><td class="font-bold text-white text-base">R$ 7.000</td><td class="font-black text-emerald-400 text-lg">R$ 16.000</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-6 p-4 rounded-xl bg-emerald-500/5 border border-emerald-500/10 text-xs text-gray-400">
+                    <strong class="text-emerald-400">Nota:</strong> A taxa de gestão de tráfego de R$ 1.500/mês está alinhada ao mercado premium para uma operação completa (estratégia, implementação, otimização diária e relatórios semanais). Não inclui produção audiovisual avançada.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI PROJECTION -->
+    <section id="roi" class="py-24 border-t border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <span class="text-emerald-400 text-sm font-semibold tracking-widest uppercase">05 — Resultados</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-3">Projeção de ROI</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Cenário conservador baseado em benchmarks do nicho de gráficas e embalagens.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mb-12 fade-in">
+                <div class="glass-card rounded-2xl p-8 text-center">
+                    <div class="text-xs text-yellow-400 font-bold uppercase tracking-widest mb-4">Mês 1 — Teste</div>
+                    <div class="text-sm text-gray-400 mb-2">Investimento Total</div>
+                    <div class="text-2xl font-bold text-white mb-4">R$ 4.000</div>
+                    <div class="text-sm text-gray-400 mb-2">Faturamento Estimado</div>
+                    <div class="text-3xl font-black text-yellow-400">R$ 6.000 — R$ 10.000</div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <span class="text-xs text-gray-500">ROAS Estimado</span>
+                        <div class="text-xl font-bold text-white">1,5x — 2,5x</div>
+                    </div>
+                    <div class="mt-2"><span class="text-xs text-gray-500">Leads estimados: 130-250</span></div>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center">
+                    <div class="text-xs text-blue-400 font-bold uppercase tracking-widest mb-4">Mês 2 — Otimizar</div>
+                    <div class="text-sm text-gray-400 mb-2">Investimento Total</div>
+                    <div class="text-2xl font-bold text-white mb-4">R$ 5.000</div>
+                    <div class="text-sm text-gray-400 mb-2">Faturamento Estimado</div>
+                    <div class="text-3xl font-black text-blue-400">R$ 15.000 — R$ 22.000</div>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <span class="text-xs text-gray-500">ROAS Estimado</span>
+                        <div class="text-xl font-bold text-white">3x — 4,5x</div>
+                    </div>
+                    <div class="mt-2"><span class="text-xs text-gray-500">Leads estimados: 300-600</span></div>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-emerald-500/5 to-transparent"></div>
+                    <div class="relative">
+                        <div class="text-xs text-emerald-400 font-bold uppercase tracking-widest mb-4">Mês 3 — Escala 🚀</div>
+                        <div class="text-sm text-gray-400 mb-2">Investimento Total</div>
+                        <div class="text-2xl font-bold text-white mb-4">R$ 7.000</div>
+                        <div class="text-sm text-gray-400 mb-2">Faturamento Estimado</div>
+                        <div class="text-3xl font-black gradient-text">R$ 35.000 — R$ 56.000</div>
+                        <div class="mt-4 pt-4 border-t border-white/10">
+                            <span class="text-xs text-gray-500">ROAS Estimado</span>
+                            <div class="text-xl font-bold gradient-text">5x — 8x</div>
+                        </div>
+                        <div class="mt-2"><span class="text-xs text-gray-500">Leads estimados: 625-1.660</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- TOTAL -->
+            <div class="glass rounded-2xl p-8 text-center glow fade-in">
+                <div class="text-sm text-gray-400 mb-2">Projeção Total — 90 Dias</div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div><div class="text-xs text-gray-500 mb-1">Investimento Total</div><div class="text-3xl font-black text-white">R$ 16.000</div></div>
+                    <div><div class="text-xs text-gray-500 mb-1">Faturamento Projetado</div><div class="text-3xl font-black gradient-text">R$ 56.000 — R$ 88.000</div></div>
+                    <div><div class="text-xs text-gray-500 mb-1">ROI Projetado</div><div class="text-3xl font-black gradient-text">250% — 450%</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="py-24 border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6 text-center fade-in">
+            <div class="glass rounded-3xl p-12 glow relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-transparent to-emerald-500/5"></div>
+                <div class="relative">
+                    <div class="text-5xl mb-6">🤝</div>
+                    <h2 class="text-3xl md:text-4xl font-black text-white mb-4">Pronto para escalar?</h2>
+                    <p class="text-gray-400 mb-8 max-w-lg mx-auto">Transforme a Personalize Embalagens em uma máquina de vendas previsível. Vagas limitadas para gestão premium.</p>
+                    <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Gostaria%20de%20aprovar%20a%20proposta%20de%20Growth%20Marketing%20para%20a%20Personalize%20Embalagens." class="glow-btn inline-flex items-center gap-2 px-10 py-4 rounded-full text-dark-900 font-bold text-lg" id="cta-whatsapp">
+                        Aprovar Proposta via WhatsApp →
+                    </a>
+                    <p class="text-xs text-gray-600 mt-6">Proposta válida por 7 dias • Início imediato após aprovação</p>
+                    <div class="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-white/10 text-center">
+                        <div><div class="text-2xl font-bold text-white">100%</div><div class="text-xs text-gray-500">Transparência nos dados</div></div>
+                        <div><div class="text-2xl font-bold text-white">Semanal</div><div class="text-xs text-gray-500">Relatórios de performance</div></div>
+                        <div><div class="text-2xl font-bold text-white">Dedicado</div><div class="text-xs text-gray-500">Gestor de tráfego exclusivo</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 border-t border-white/5 text-center text-xs text-gray-600">
+        <p>© 2026 — Proposta Confidencial para Personalize Embalagens. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Scroll progress
+        window.addEventListener('scroll', () => {
+            const h = document.documentElement, b = document.body;
+            const st = h.scrollTop || b.scrollTop;
+            const sh = (h.scrollHeight || b.scrollHeight) - h.clientHeight;
+            document.getElementById('progressBar').style.width = (st / sh * 100) + '%';
+        });
+        // Fade in on scroll
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+        }, {threshold: 0.1});
+        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => { e.preventDefault(); document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'}); });
+        });
+    </script>
+</body>
+</html>
